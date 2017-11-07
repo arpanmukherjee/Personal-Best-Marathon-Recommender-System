@@ -1,5 +1,5 @@
-f1 = open('updatedData.txt','w')
-lines = [line.rstrip('\n') for line in open('RaceDataFull')]
+f1 = open('RaceDataFull','w')
+lines = [line.rstrip('\n') for line in open('updatedData.txt')]
 per_dict = {}
 for i in lines:
     temp = i.split('\t')
@@ -18,5 +18,14 @@ for key in per_dict:
     if len(per_dict[key]) < 3:
         continue
     for j in range(len(per_dict[key])):
-        f1.write(str(per_dict[key][j])+'\n')
+        temp = per_dict[key][j].split('\t')
+        t_time = int(float(temp[3]))
+        temp[3] = str(t_time)
+        t_temp = ""
+        i = 0
+        while i<len(temp)-1:
+            t_temp += (str(temp[i])+"\t")
+            i += 1
+        t_temp += str(temp[i])
+        f1.write(str(t_temp)+'\n')
 f1.close()
