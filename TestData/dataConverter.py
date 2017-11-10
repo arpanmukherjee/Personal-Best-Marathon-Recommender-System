@@ -1,4 +1,11 @@
-f1 = open('RaceDataFull','w')
+def convert(data):
+    temp = data.split('\t')
+    t_time = int(float(temp[3]))
+    temp[3] = str(t_time)
+
+
+f1 = open('testData.txt','w')
+f2 = open('trainData.txt', 'w')
 lines = [line.rstrip('\n') for line in open('updatedData.txt')]
 per_dict = {}
 for i in lines:
