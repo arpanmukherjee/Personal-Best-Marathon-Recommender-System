@@ -40,7 +40,7 @@ pandas==0.13.1
 praw==2.1.12
 prettyplotlib==0.1.7
 psycopg2==2.5.2
-py==1.4.20
+py==1.10.0
 pyparsing==2.0.1
 pytest==2.3.5
 python-dateutil==2.2
