@@ -25,7 +25,7 @@ fakeredis==0.3.1
 gnureadline==6.2.5
 honcho==0.5.0
 httpie==0.8.0
-ipython==2.0.0
+ipython==7.16.3
 irc==8.5.4
 itsdangerous==0.23
 lxml==3.3.1
